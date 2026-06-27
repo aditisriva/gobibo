@@ -1,9 +1,21 @@
+<?php
+  // Dynamic page config
+  $site_name    = "bookHotel";
+  $site_tagline = "Hotel Booking";
+
+  // Dynamic check-in / check-out dates (server-side)
+  $checkin  = date('Y-m-d', strtotime('+1 day'));
+  $checkout = date('Y-m-d', strtotime('+2 days'));
+
+  // Current year for footer copyright
+  $current_year = date('Y');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>bookHotel – Hotel Booking</title>
+  <title><?php echo htmlspecialchars($site_name); ?> – <?php echo htmlspecialchars($site_tagline); ?></title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
@@ -74,11 +86,11 @@
             </div>
             <div class="col-6 col-md-2">
               <label class="form-label small fw-600 text-muted">CHECK-IN</label>
-              <input type="date" class="form-control"/>
+              <input type="date" class="form-control" value="<?php echo $checkin; ?>"/>
             </div>
             <div class="col-6 col-md-2">
               <label class="form-label small fw-600 text-muted">CHECK-OUT</label>
-              <input type="date" class="form-control"/>
+              <input type="date" class="form-control" value="<?php echo $checkout; ?>"/>
             </div>
             <div class="col-6 col-md-2">
               <label class="form-label small fw-600 text-muted">ROOMS & GUESTS</label>
@@ -110,7 +122,7 @@
             </div>
             <div class="col-6 col-md-2">
               <label class="form-label small fw-600 text-muted">DEPART</label>
-              <input type="date" class="form-control"/>
+              <input type="date" class="form-control" value="<?php echo $checkin; ?>"/>
             </div>
             <div class="col-6 col-md-2">
               <label class="form-label small fw-600 text-muted">TRAVELLERS</label>
@@ -137,7 +149,7 @@
             </div>
             <div class="col-6 col-md-3">
               <label class="form-label small fw-600 text-muted">DEPARTURE DATE</label>
-              <input type="date" class="form-control"/>
+              <input type="date" class="form-control" value="<?php echo $checkin; ?>"/>
             </div>
             <div class="col-6 col-md-3">
               <label class="form-label small fw-600 text-muted">DURATION</label>
@@ -711,7 +723,7 @@
     </div>
     <hr class="border-secondary"/>
     <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
-      <p class="text-white-50 small mb-0">© 2026 bookHotel Technologies Pvt. Ltd. All rights reserved.</p>
+      <p class="text-white-50 small mb-0">© <?php echo $current_year; ?> bookHotel Technologies Pvt. Ltd. All rights reserved.</p>
       <div class="d-flex gap-2">
         <img src="https://img.shields.io/badge/Visa-1A1F71?style=flat&logo=visa&logoColor=white" height="20" alt="Visa"/>
         <img src="https://img.shields.io/badge/Mastercard-EB001B?style=flat&logo=mastercard&logoColor=white" height="20" alt="Mastercard"/>
@@ -753,14 +765,7 @@
     });
   });
 
-  // Set default dates
-  const today = new Date();
-  const tomorrow = new Date(today); tomorrow.setDate(today.getDate() + 1);
-  const dayAfter = new Date(today); dayAfter.setDate(today.getDate() + 2);
-  const fmt = d => d.toISOString().split('T')[0];
-  document.querySelectorAll('input[type=date]').forEach((el, i) => {
-    el.value = i % 2 === 0 ? fmt(tomorrow) : fmt(dayAfter);
-  });
+  // Set default dates — handled server-side by PHP (see top of file)
 </script>
 </body>
 </html>
