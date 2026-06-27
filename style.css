@@ -1,0 +1,398 @@
+/* ===== BASE ===== */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #1a1a2e;
+  background: #fff;
+}
+
+.fw-800 { font-weight: 800 !important; }
+.fw-700 { font-weight: 700 !important; }
+.fw-600 { font-weight: 600 !important; }
+
+/* ===== NAVBAR ===== */
+#mainNav {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  transition: all 0.3s ease;
+  padding: 0.75rem 0;
+}
+
+#mainNav.scrolled {
+  background: rgba(22, 33, 62, 0.97) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+
+#mainNav .nav-link {
+  color: rgba(255,255,255,0.85) !important;
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 0.5rem 0.75rem !important;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+#mainNav .nav-link:hover {
+  color: #fff !important;
+  background: rgba(255,255,255,0.1);
+}
+
+/* ===== HERO ===== */
+.hero-section {
+  min-height: 92vh;
+  background: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1600&q=85') center/cover no-repeat;
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(26,26,46,0.82) 0%, rgba(22,33,62,0.70) 100%);
+}
+
+/* ===== SEARCH CARD ===== */
+.search-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 860px;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.28);
+}
+
+.search-tabs .nav-link {
+  color: #555;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 30px;
+  padding: 0.45rem 1.1rem;
+  transition: all 0.2s;
+}
+
+.search-tabs .nav-link.active {
+  background: linear-gradient(135deg, #e52d5e, #c0002a);
+  color: #fff;
+}
+
+.search-card .form-control,
+.search-card .form-select,
+.search-card .input-group-text {
+  border-color: #e0e0e0;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  padding: 0.6rem 0.9rem;
+}
+
+.search-card .form-control:focus,
+.search-card .form-select:focus {
+  border-color: #e52d5e;
+  box-shadow: 0 0 0 3px rgba(229,45,94,0.15);
+}
+
+.search-card .form-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: #888;
+  margin-bottom: 0.3rem;
+}
+
+/* ===== DESTINATION CARDS ===== */
+.dest-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  height: 200px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dest-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.2);
+}
+
+.dest-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.dest-card:hover img {
+  transform: scale(1.07);
+}
+
+.dest-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2.5rem 1rem 1rem;
+  background: linear-gradient(transparent, rgba(0,0,0,0.72));
+  color: #fff;
+}
+
+/* ===== HOTEL CARDS ===== */
+.hotel-card {
+  border-radius: 16px !important;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hotel-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.14) !important;
+}
+
+.hotel-img {
+  height: 190px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.hotel-card:hover .hotel-img {
+  transform: scale(1.05);
+}
+
+.btn-wishlist {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255,255,255,0.92);
+  border: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #555;
+  transition: all 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.btn-wishlist:hover {
+  background: #fff;
+  transform: scale(1.1);
+}
+
+.rating-badge {
+  background: #1a7a4a;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.22rem 0.5rem;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.amenity-tag {
+  background: #f0f4ff;
+  color: #3b5bdb;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.22rem 0.55rem;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+/* ===== DEALS SECTION ===== */
+.deals-section {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+}
+
+.deal-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.deal-card:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.25);
+  transform: translateY(-3px);
+}
+
+.coupon-code {
+  background: rgba(255,255,255,0.12);
+  border: 1px dashed rgba(255,255,255,0.4);
+  color: #ffc107;
+  padding: 0.3rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+/* ===== FEATURE BOXES ===== */
+.feature-box {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  transition: all 0.3s ease;
+}
+
+.feature-box:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  transform: translateY(-4px);
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e52d5e15, #c0002a15);
+  color: #e52d5e;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+/* ===== REVIEWS ===== */
+.review-card {
+  background: #fafbff;
+  border-radius: 16px;
+  border: 1px solid #e8ecf4;
+  transition: all 0.3s ease;
+}
+
+.review-card:hover {
+  box-shadow: 0 8px 28px rgba(0,0,0,0.1);
+  border-color: #d0d9f0;
+  transform: translateY(-3px);
+}
+
+/* ===== APP SECTION ===== */
+.app-section {
+  background: linear-gradient(135deg, #f0f4ff 0%, #e8f5ff 100%);
+}
+
+.app-btn {
+  background: #1a1a2e;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.app-btn:hover {
+  background: #0f3460;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+/* Phone mockup */
+.phone-frame {
+  width: 220px;
+  height: 400px;
+  background: #1a1a2e;
+  border-radius: 36px;
+  padding: 12px;
+  box-shadow: 0 24px 60px rgba(26,26,46,0.35);
+  margin: 0 auto;
+  position: relative;
+}
+
+.phone-frame::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 8px;
+  background: #333;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.phone-screen {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border-radius: 28px;
+  height: 100%;
+  overflow: hidden;
+  padding-top: 20px;
+}
+
+/* ===== FOOTER ===== */
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #ffc107;
+}
+
+.social-icon {
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-flex;
+}
+
+.social-icon:hover {
+  color: #ffc107 !important;
+  transform: translateY(-2px);
+}
+
+/* ===== BACK TO TOP ===== */
+#backToTop {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+#backToTop.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #c0002a; border-radius: 3px; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 767px) {
+  .hero-section { min-height: 100vh; }
+  .search-card { padding: 1.25rem; border-radius: 16px; }
+  .dest-card { height: 160px; }
+  .hotel-img { height: 160px; }
+  .phone-frame { width: 180px; height: 320px; }
+}
+
+@media (max-width: 991px) {
+  #mainNav .navbar-collapse {
+    background: rgba(22,33,62,0.98);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-top: 0.5rem;
+  }
+}
