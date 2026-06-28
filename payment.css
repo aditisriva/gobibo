@@ -1,0 +1,138 @@
+/* ===== SECURE BANNER ===== */
+.secure-banner {
+  background: #f0faf5;
+  border: 1.5px solid #b7e4cc;
+  border-radius: 12px;
+  padding: 0.85rem 1.25rem;
+  display: flex;
+  align-items: center;
+}
+
+/* ===== PAYMENT TABS ===== */
+.payment-tabs {
+  display: flex;
+  overflow-x: auto;
+  border-bottom: 2px solid #f0f0f0;
+  scrollbar-width: none;
+}
+.payment-tabs::-webkit-scrollbar { display: none; }
+.pay-tab {
+  flex-shrink: 0;
+  padding: 1rem 1.25rem;
+  border: none;
+  background: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #666;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.pay-tab:hover  { color: #e52d5e; }
+.pay-tab.active { color: #e52d5e; border-bottom-color: #e52d5e; }
+
+/* ===== UPI APPS ===== */
+.upi-app-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 0.85rem 1.2rem;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #333;
+  transition: all 0.2s;
+  min-width: 80px;
+}
+.upi-app-btn:hover  { border-color: #e52d5e; background: #fff0f4; }
+.upi-app-btn.selected { border-color: #e52d5e; background: #fff0f4; box-shadow: 0 0 0 3px rgba(229,45,94,0.12); }
+
+/* ===== BANK TILES ===== */
+.bank-tile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 0.6rem 0.85rem;
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+.bank-tile input { accent-color: #e52d5e; }
+.bank-tile:has(input:checked) { border-color: #e52d5e; background: #fff0f4; color: #e52d5e; }
+.bank-tile:hover { border-color: #e52d5e; }
+
+/* ===== EMI TILES ===== */
+.emi-tile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+  width: 100%;
+}
+.emi-tile input { accent-color: #e52d5e; }
+.emi-tile:has(input:checked) { border-color: #e52d5e; background: #fff0f4; }
+
+/* ===== OFFER CHIPS ===== */
+.offer-chip {
+  display: inline-block;
+  padding: 0.3rem 0.9rem;
+  background: #fff0f4;
+  border: 1.5px dashed #e52d5e;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #e52d5e;
+  cursor: pointer;
+  letter-spacing: 0.06em;
+  transition: all 0.2s;
+}
+.offer-chip:hover { background: #e52d5e; color: #fff; }
+
+/* ===== SAVE CARD ===== */
+.save-card-label { display:flex; align-items:center; cursor:pointer; }
+
+/* ===== CONFIRMATION MODAL ===== */
+.confirm-icon {
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1a7a4a, #15a055);
+  color: #fff;
+  font-size: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  box-shadow: 0 8px 24px rgba(26,122,74,0.35);
+}
+.booking-ref {
+  background: #f8f9ff;
+  border: 1.5px dashed #3b5bdb;
+  border-radius: 10px;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  color: #3b5bdb;
+  letter-spacing: 0.05em;
+}
+
+/* ===== SPINNER ===== */
+@keyframes spin { to { transform:rotate(360deg); } }
+.spin { display:inline-block; animation:spin 0.8s linear infinite; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width:767px) {
+  .pay-tab { padding: 0.75rem 0.9rem; font-size:0.78rem; }
+  .upi-app-btn { padding: 0.65rem 0.85rem; min-width:70px; }
+}

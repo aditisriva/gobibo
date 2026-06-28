@@ -34,7 +34,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navMenu">
       <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
-        <li class="nav-item"><a class="nav-link" href="#">Hotels</a></li>
+        <li class="nav-item"><a class="nav-link" href="hotels.html">Hotels</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Destinations</a></li>
         <li class="nav-item"><a class="nav-link" href="#">My Bookings</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
@@ -59,16 +59,6 @@
         <li class="nav-item">
           <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#hotels">
             <i class="bi bi-building me-1"></i>Hotels
-          </button>
-        </li>
-        <li class="nav-item">
-          <button class="nav-link" data-bs-toggle="pill" data-bs-target="#flights">
-            <i class="bi bi-airplane me-1"></i>Flights
-          </button>
-        </li>
-        <li class="nav-item">
-          <button class="nav-link" data-bs-toggle="pill" data-bs-target="#packages">
-            <i class="bi bi-suitcase me-1"></i>Packages
           </button>
         </li>
       </ul>
@@ -102,65 +92,6 @@
               </select>
             </div>
             <div class="col-6 col-md-2">
-              <button class="btn btn-warning w-100 fw-700 py-2">
-                <i class="bi bi-search me-1"></i>Search
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Flights Tab -->
-        <div class="tab-pane fade" id="flights">
-          <div class="row g-2 align-items-end">
-            <div class="col-12 col-md-3">
-              <label class="form-label small fw-600 text-muted">FROM</label>
-              <input type="text" class="form-control" placeholder="Departure city"/>
-            </div>
-            <div class="col-12 col-md-3">
-              <label class="form-label small fw-600 text-muted">TO</label>
-              <input type="text" class="form-control" placeholder="Arrival city"/>
-            </div>
-            <div class="col-6 col-md-2">
-              <label class="form-label small fw-600 text-muted">DEPART</label>
-              <input type="date" class="form-control" value="<?php echo $checkin; ?>"/>
-            </div>
-            <div class="col-6 col-md-2">
-              <label class="form-label small fw-600 text-muted">TRAVELLERS</label>
-              <select class="form-select">
-                <option>1 Adult</option>
-                <option>2 Adults</option>
-                <option>2 Adults, 1 Child</option>
-              </select>
-            </div>
-            <div class="col-12 col-md-2">
-              <button class="btn btn-warning w-100 fw-700 py-2">
-                <i class="bi bi-search me-1"></i>Search
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Packages Tab -->
-        <div class="tab-pane fade" id="packages">
-          <div class="row g-2 align-items-end">
-            <div class="col-12 col-md-4">
-              <label class="form-label small fw-600 text-muted">GOING TO</label>
-              <input type="text" class="form-control" placeholder="Country or destination"/>
-            </div>
-            <div class="col-6 col-md-3">
-              <label class="form-label small fw-600 text-muted">DEPARTURE DATE</label>
-              <input type="date" class="form-control" value="<?php echo $checkin; ?>"/>
-            </div>
-            <div class="col-6 col-md-3">
-              <label class="form-label small fw-600 text-muted">DURATION</label>
-              <select class="form-select">
-                <option>3 Nights</option>
-                <option>5 Nights</option>
-                <option>7 Nights</option>
-                <option>10 Nights</option>
-              </select>
-            </div>
-            <div class="col-12 col-md-2">
               <button class="btn btn-warning w-100 fw-700 py-2">
                 <i class="bi bi-search me-1"></i>Search
               </button>

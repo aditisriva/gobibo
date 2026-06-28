@@ -1,0 +1,290 @@
+/* ===================================================
+   booking.css — Review Booking Page Styles
+=================================================== */
+
+/* ===== PROGRESS BAR ===== */
+.booking-progress-bar {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  padding: 1.25rem 0 1.5rem;
+}
+.progress-steps {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+.progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  min-width: 80px;
+}
+.progress-step span {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.45);
+  white-space: nowrap;
+}
+.progress-step.active span  { color: #ffc107; }
+.progress-step.completed span { color: rgba(255,255,255,0.75); }
+
+.step-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  border: 2px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.4);
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+.progress-step.active .step-circle {
+  background: #ffc107;
+  border-color: #ffc107;
+  color: #1a1a2e;
+  box-shadow: 0 0 0 4px rgba(255,193,7,0.25);
+}
+.progress-step.completed .step-circle {
+  background: #1a7a4a;
+  border-color: #1a7a4a;
+  color: #fff;
+}
+.progress-line {
+  flex: 1;
+  height: 2px;
+  background: rgba(255,255,255,0.15);
+  margin-bottom: 22px;
+  min-width: 30px;
+}
+.progress-line.completed { background: #1a7a4a; }
+
+/* ===== REVIEW SECTION CARDS ===== */
+.review-section-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+}
+.review-section-header {
+  background: #f8f9ff;
+  border-bottom: 1px solid #e8ecf4;
+  padding: 1rem 1.5rem;
+}
+.review-section-body {
+  padding: 1.5rem;
+}
+.review-section-body .form-control,
+.review-section-body .form-select,
+.review-section-body .input-group-text {
+  border-radius: 10px;
+  border-color: #e0e0e0;
+  font-size: 0.9rem;
+  padding: 0.6rem 0.9rem;
+}
+.review-section-body .form-control:focus,
+.review-section-body .form-select:focus {
+  border-color: #e52d5e;
+  box-shadow: 0 0 0 3px rgba(229,45,94,0.12);
+}
+.review-section-body .form-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #888;
+  margin-bottom: 0.3rem;
+}
+
+/* ===== HOTEL THUMB ===== */
+.hotel-thumb {
+  width: 90px;
+  height: 75px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* ===== STAY DETAIL BOXES ===== */
+.stay-detail-box {
+  background: #f8f9ff;
+  border: 1px solid #e8ecf4;
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  text-align: center;
+}
+.stay-detail-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  color: #888;
+  margin-bottom: 0.3rem;
+}
+.stay-detail-value {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin-bottom: 0.2rem;
+}
+.stay-detail-sub {
+  font-size: 0.7rem;
+  color: #999;
+}
+
+/* ===== CANCELLATION POLICY ===== */
+.cancellation-policy {
+  background: #f0faf5;
+  border: 1px solid #b7e4cc;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+}
+
+/* ===== INFO LIST ===== */
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+.info-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.875rem;
+  color: #444;
+}
+.info-list li i { margin-top: 2px; flex-shrink: 0; }
+
+/* ===== PRICE SUMMARY CARD ===== */
+.price-summary-card {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.13);
+  border: 1px solid #e0e0e0;
+}
+.price-summary-header {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  padding: 1.1rem 1.5rem;
+}
+.price-summary-body {
+  background: #fff;
+  padding: 1.5rem;
+}
+.price-summary-body .form-control {
+  border-radius: 10px;
+  border-color: #e0e0e0;
+  font-size: 0.875rem;
+}
+.price-summary-body .form-control:focus {
+  border-color: #e52d5e;
+  box-shadow: 0 0 0 3px rgba(229,45,94,0.12);
+}
+
+/* ===== SAVINGS BADGE ===== */
+.savings-badge {
+  background: #f0faf5;
+  border: 1px solid #b7e4cc;
+  border-radius: 10px;
+  padding: 0.6rem 1rem;
+  display: flex;
+  align-items: center;
+}
+
+/* ===== TRUST BADGES ===== */
+.trust-badges {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+.trust-item {
+  background: #fff;
+  border: 1px solid #e8ecf4;
+  border-radius: 12px;
+  padding: 0.75rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #444;
+  text-align: center;
+}
+.trust-item i { font-size: 1.1rem; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 991px) {
+  .sticky-booking { position: static; }
+}
+@media (max-width: 767px) {
+  .progress-step span { font-size: 0.62rem; }
+  .review-section-body { padding: 1rem; }
+  .review-section-header { padding: 0.85rem 1rem; }
+  .hotel-thumb { width: 70px; height: 60px; }
+  .trust-badges { grid-template-columns: repeat(3,1fr); }
+}
+
+/* ===== PREFERENCE CHIPS (Guest Details) ===== */
+.pref-chip, .pref-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.35rem 0.9rem;
+  border-radius: 20px;
+  border: 1.5px solid #e0e0e0;
+  background: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #444;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.pref-chip input, .pref-check input {
+  accent-color: #e52d5e;
+  cursor: pointer;
+}
+.pref-chip:has(input:checked),
+.pref-check:has(input:checked) {
+  background: #fff0f4;
+  border-color: #e52d5e;
+  color: #e52d5e;
+}
+
+/* ===== LOGIN PROMPT ===== */
+.login-prompt-card {
+  background: linear-gradient(135deg, #fff8e1, #fff3cd);
+  border: 1.5px solid #ffe082;
+  border-radius: 16px;
+  padding: 1.2rem 1.5rem;
+}
+.login-prompt-icon {
+  width: 44px;
+  height: 44px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: #e52d5e;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+/* ===== ADDITIONAL GUEST ROW ===== */
+.additional-guest-row {
+  background: #f8f9ff;
+  border: 1px solid #e8ecf4;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+}
+.additional-guest-row .form-control {
+  border-radius: 8px;
+  font-size: 0.85rem;
+}
