@@ -1,4 +1,4 @@
-<?php
+﻿<?php
   // Dynamic page config
   $site_name    = "bookHotel";
   $site_tagline = "Hotel Booking";
@@ -39,7 +39,7 @@
         <li class="nav-item"><a class="nav-link" href="#">My Bookings</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
         <li class="nav-item ms-lg-3">
-          <a class="btn btn-outline-warning btn-sm px-3" href="#">Login / Sign Up</a>
+          <a class="btn btn-outline-warning btn-sm px-3" href="login.html">Login / Sign Up</a>
         </li>
       </ul>
     </div>
@@ -424,7 +424,7 @@
 <!-- ========== WHY CHOOSE US ========== -->
 <section class="py-5 bg-light">
   <div class="container text-center">
-    <h2 class="fw-800 mb-1">Why Choose StayEase?</h2>
+    <h2 class="fw-800 mb-1">Why Choose bookHotel?</h2>
     <p class="text-muted mb-5">Trusted by 10 million+ travellers worldwide</p>
     <div class="row g-4">
       <div class="col-6 col-md-3">
@@ -502,7 +502,7 @@
           <div class="d-flex gap-1 text-warning mb-3">
             <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
           </div>
-          <p class="text-muted mb-4">"Heritage Haveli in Jaipur was a dream. StayEase's photos were accurate, the deal was incredible, and the booking process took less than 3 minutes!"</p>
+          <p class="text-muted mb-4">"Heritage Haveli in Jaipur was a dream. bookHotel's photos were accurate, the deal was incredible, and the booking process took less than 3 minutes!"</p>
           <div class="d-flex align-items-center gap-3">
             <img src="https://i.pravatar.cc/48?img=21" class="rounded-circle" width="48" height="48" alt="Ananya K"/>
             <div>

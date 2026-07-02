@@ -355,3 +355,6 @@
   .detail-card { padding: 1.25rem; border-radius: 16px; }
   .booking-card-header, .booking-card-body { padding: 1.25rem; }
 }
+
+/* ===== FILTER HIDE CLASS ===== */
+.card-hidden { display: none !important; }
